@@ -3,11 +3,15 @@
 	"auto_complete_delay": 50,
 	"bold_folder_labels": true,
 	"caret_style": "phase",
-	"color_scheme": "Packages/Color Scheme - Default/LAZY.tmTheme",
+	"color_scheme": "Packages/Color Scheme - Default/Slush & Poppies.tmTheme",
 	"default_encoding": "UTF-8",
 	"draw_minimap_border": true,
 	"draw_white_space": "all",
-	"font_face": "Consolas",
+	"font_face": "ＭＳ ゴシック",
+	"font_options":
+	[
+		"no_antialias"
+	],
 	"font_size": 10,
 	"highlight_line": true,
 	"ignored_packages":
@@ -22,10 +26,11 @@
 	"overlay_scroll_bars": "enabled",
 	"rulers":
 	[
-		80
+		80,
+		100
 	],
 	"scroll_speed": 1.0,
-	"tab_size": 8,
+	"tab_size": 2,
 	"theme": "Default.sublime-theme",
 	"translate_tabs_to_spaces": false,
 	"trim_trailing_white_space_on_save": false,

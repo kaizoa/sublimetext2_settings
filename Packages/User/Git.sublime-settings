@@ -10,7 +10,7 @@
 	,"git_flow_command": "/usr/local/bin/git-flow"
 
 	// use the panel for diff output, rather than a new scratch window (new tab)
-	,"diff_panel": false
+	,"diff_panel": true
 
 	// affects blame command when no selection is made
 	// true: blame whole file
