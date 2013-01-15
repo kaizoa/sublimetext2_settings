@@ -1,0 +1,97 @@
+{
+	"auto_upgrade": true,
+	"auto_upgrade_frequency": 1,
+	"auto_upgrade_ignore":
+	[
+	],
+	"auto_upgrade_last_run": null,
+	"cache_length": 300,
+	"certs":
+	{
+		"sublime.wbond.net":
+		[
+			"7f4f8622b4fd001c7f648e09aae7edaa",
+			""
+		]
+	},
+	"debug": false,
+	"dirs_to_ignore":
+	[
+		".hg",
+		".git",
+		".svn",
+		"_darcs",
+		"CVS"
+	],
+	"files_to_ignore":
+	[
+		".hgignore",
+		".gitignore",
+		".bzrignore",
+		"*.pyc",
+		"*.sublime-project",
+		"*.sublime-workspace",
+		"*.tmTheme.cache"
+	],
+	"files_to_ignore_binary":
+	[
+		".hgignore",
+		".gitignore",
+		".bzrignore",
+		"*.py",
+		"*.sublime-project",
+		"*.sublime-workspace",
+		"*.tmTheme.cache"
+	],
+	"files_to_include":
+	[
+	],
+	"files_to_include_binary":
+	[
+		"__init__.py"
+	],
+	"git_binary": "",
+	"git_update_command":
+	[
+		"pull",
+		"origin",
+		"master",
+		"--ff",
+		"--commit"
+	],
+	"hg_binary": "",
+	"hg_update_command":
+	[
+		"pull",
+		"--update",
+		"default"
+	],
+	"ignore_vcs_packages": false,
+	"install_missing": true,
+	"installed_packages":
+	[
+		"ConvertToUTF8",
+		"Git",
+		"IMESupport",
+		"Package Control",
+		"SideBarEnhancements",
+		"SideBarGit",
+		"SublimeBlockCursor"
+	],
+	"package_destination": "",
+	"package_name_map":
+	{
+	},
+	"proxy_password": "",
+	"proxy_username": "",
+	"repositories":
+	[
+	],
+	"repository_channels":
+	[
+		"https://sublime.wbond.net/repositories.json"
+	],
+	"submit_url": "https://sublime.wbond.net/submit",
+	"submit_usage": true,
+	"timeout": 30
+}
