@@ -31,7 +31,7 @@
 	],
 	"scroll_speed": 1.0,
 	"tab_size": 2,
-	"theme": "Default.sublime-theme",
+	"theme": "Soda Light.sublime-theme",
 	"translate_tabs_to_spaces": false,
 	"trim_trailing_white_space_on_save": false,
 	"vintage_ctrl_keys": true,
