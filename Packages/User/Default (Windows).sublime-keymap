@@ -7,5 +7,12 @@
 			{ "key": "auto_complete_visible", "operator": "equal", "operand": false },
 			{ "key": "setting.tab_completion", "operator": "equal", "operand": true }
 		]
-	}
+	},
+
+	// ConvertToUTF8
+	{ "keys": ["ctrl+shift+c"], "command": "convert_to_utf8", "args": {"encoding": "CP932", "stamp": "0" } },
+	
+	// SideBarEnhancement
+	{ "keys": ["f2"], "command": "side_bar_rename" },
+	{ "keys": ["ctrl+alt+f"], "command": "side_bar_find_files_path_containing" }
 ]
