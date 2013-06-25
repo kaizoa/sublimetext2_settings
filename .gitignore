@@ -5,3 +5,5 @@
 Thumbs.db
 .DS_Store
 Packages/User/encoding_cache.json
+
+/Packages/User/Package Control.last-run

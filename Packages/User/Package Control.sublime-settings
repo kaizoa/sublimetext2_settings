@@ -73,15 +73,12 @@
 		"ConvertToUTF8",
 		"Git",
 		"IMESupport",
+		"Markdown Preview",
 		"Package Control",
 		"SideBarEnhancements",
 		"SideBarGit",
 		"SublimeBlockCursor",
-		"Theme - Soda",
-		"Unity3D",
-		"Unity3D Build System",
-		"Unity3D Script Reference Search",
-		"Unity3D Snippets and Completes"
+		"Theme - Soda"
 	],
 	"package_destination": "",
 	"package_name_map":
