@@ -1,0 +1,31 @@
+[
+    {
+        "caption": "Subclim: Set Eclim executable path",
+        "command": "set_eclim_path"
+    },
+    {
+        "caption": "Subclim: Run current class",
+        "command": "java_run_class"
+    },
+    {
+        "caption": "Subclim: Import class under cursor",
+        "command": "java_import_class_under_cursor"
+    },
+    {
+        "caption": "Subclim: Go to Definition",
+        "command": "java_goto_definition"
+    },
+    {
+        "caption": "Subclim: Go Back",
+        "command": "subclim_go_back"
+    },
+    {
+        "caption": "Subclim: Go to Usages",
+        "command": "java_goto_usages"
+    },
+    {
+        "caption": "Subclim: Request completions",
+        "command": "manual_completion_request"
+    }
+
+]

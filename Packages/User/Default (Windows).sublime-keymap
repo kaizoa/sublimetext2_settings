@@ -11,6 +11,9 @@
 
 	// ConvertToUTF8
 	{ "keys": ["ctrl+shift+c"], "command": "convert_to_utf8", "args": {"encoding": "CP932", "stamp": "0" } },
+
+	// FileDiffs
+	{ "keys": ["ctrl+shift+d"], "command": "file_diff_menu" },
 	
 	// SideBarEnhancement
 	{ "keys": ["f2"], "command": "side_bar_rename" },

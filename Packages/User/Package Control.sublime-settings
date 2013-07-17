@@ -70,14 +70,17 @@
 	"install_missing": true,
 	"installed_packages":
 	[
+		"All Autocomplete",
+		"Block Cursor Everywhere",
 		"ConvertToUTF8",
+		"FileDiffs",
 		"Git",
 		"IMESupport",
 		"Markdown Preview",
 		"Package Control",
 		"SideBarEnhancements",
 		"SideBarGit",
-		"SublimeBlockCursor",
+		"Subclim",
 		"Theme - Soda"
 	],
 	"package_destination": "",
@@ -88,7 +91,7 @@
 	"proxy_username": "",
 	"repositories":
 	[
-		"https://github.com/JulianEberius/Subclim"
+		"https://github.com/JulianEberius/Subclim.git"
 	],
 	"repository_channels":
 	[
