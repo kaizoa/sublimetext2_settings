@@ -1,3 +1,5 @@
 {
-	"eclim_executable_location": "D:/java/eclipse.jee.juno/eclim.cmd"
+	"eclim_executable_location": "D:/java/eclipse.jee.juno/eclim.cmd",
+	"subclim_log_level": "DEBUG",
+	"subclim_auto_complete": false
 }

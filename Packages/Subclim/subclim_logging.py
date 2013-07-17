@@ -99,11 +99,18 @@ class ViewLogHandler(logging.Handler):
 
 def getLogger(name, flush=False):
     '''do the heavy lifting'''
+    level = logging.ERROR
+    s = sublime.load_settings("Subclim.sublime-settings")
+    subclim_log_level = s.get("subclim_log_level", None)
+    if subclim_log_level and subclim_log_level in dir(logging):
+        level = getattr(logging, subclim_log_level)
+
     log = logging.getLogger(name)
 
     # if we have already set up logging
     if len(log.handlers) > 0:
         if not flush:
+            log.setLevel(level)
             return log
         for h in log.handlers:
             log.removeHandler(h)
@@ -126,8 +133,7 @@ def getLogger(name, flush=False):
     # handler.setFormatter(fmt)
     # log.addHandler(handler)
 
-    # log.setLevel(logging.DEBUG)
-    log.setLevel(logging.ERROR)
+    log.setLevel(level)
     return log
 
 

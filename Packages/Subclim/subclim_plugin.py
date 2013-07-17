@@ -84,8 +84,8 @@ class SubclimBase(object):
 
     def get_relative_path(self, flag, view):
         return (flag, get_context(view)[1])
-
     def get_project(self, flag, view):
+
         return (flag, get_context(view)[0])
 
     def get_cursor(self, flag, view):

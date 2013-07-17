@@ -66,8 +66,9 @@ def call_eclim(cmdline):
     
     popen = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=shell, startupinfo=sinfo)
     out, err = popen.communicate()
-    out = out.decode('utf-8')
-    err = err.decode('utf-8')
+    import locale
+    out = out.decode(locale.getpreferredencoding()).encode('utf-8')
+    err = err.decode(locale.getpreferredencoding()).encode('utf-8')
     log.debug("Results:\n" + out)
 
     # error handling
