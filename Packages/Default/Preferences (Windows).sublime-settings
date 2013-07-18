@@ -1,4 +1,8 @@
 {
-	"font_face": "Consolas",
-	"font_size": 10
+	"font_face": "ＭＳ ゴシック",
+	"font_options":
+	[
+		"no_antialias"
+	],
+	"font_size": 10,
 }

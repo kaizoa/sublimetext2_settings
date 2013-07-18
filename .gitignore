@@ -1,5 +1,7 @@
 *.pyc
 *.cache
+*.last-run
 
 Thumbs.db
+.DS_Store
 Packages/User/encoding_cache.json
