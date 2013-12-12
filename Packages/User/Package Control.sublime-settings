@@ -82,6 +82,7 @@
 		"SideBarEnhancements",
 		"SideBarGit",
 		"Subclim",
+		"SublimeLinter",
 		"Theme - Soda"
 	],
 	"package_destination": "",
