@@ -84,8 +84,8 @@ class SubclimBase(object):
 
     def get_relative_path(self, flag, view):
         return (flag, get_context(view)[1])
-    def get_project(self, flag, view):
 
+    def get_project(self, flag, view):
         return (flag, get_context(view)[0])
 
     def get_cursor(self, flag, view):
@@ -281,11 +281,11 @@ class JavaGotoDefinition(sublime_plugin.TextCommand):
         eclim.update_java_src(project, filename)
 
         go_to_cmd = ['-command', 'java_search',
-                        '-n', project,
-                        '-f', filename,
-                        '-o', str(offset),
-                        '-e', 'utf-8',
-                        '-l', str(ident_len)]
+                     '-n', project,
+                     '-f', filename,
+                     '-o', str(offset),
+                     '-e', 'utf-8',
+                     '-l', str(ident_len)]
         out = eclim.call_eclim(go_to_cmd)
         return out
 
@@ -335,12 +335,12 @@ class JavaGotoUsages(JavaGotoDefinition):
         eclim.update_java_src(project, filename)
 
         go_to_cmd = ['-command', 'java_search',
-                        '-n', project,
-                        '-f', filename,
-                        '-o', str(offset),
-                        '-e', 'utf-8',
-                        '-l', str(ident_len),
-                        '-x', 'references']
+                     '-n', project,
+                     '-f', filename,
+                     '-o', str(offset),
+                     '-e', 'utf-8',
+                     '-l', str(ident_len),
+                     '-x', 'references']
         out = eclim.call_eclim(go_to_cmd)
         return out
 
@@ -402,10 +402,10 @@ class ManualCompletionRequest(sublime_plugin.TextCommand):
         JavaCompletions.user_requested = True
         self.view.run_command("save")
         self.view.run_command('auto_complete', {
-                            'disable_auto_insert': True,
-                            'api_completions_only': True,
-                            'next_completion_if_showing': False,
-                        })
+                              'disable_auto_insert': True,
+                              'api_completions_only': True,
+                              'next_completion_if_showing': False,
+                              })
 
 
 class JavaCompletions(sublime_plugin.EventListener):
@@ -436,10 +436,10 @@ class JavaCompletions(sublime_plugin.EventListener):
     def queue_completions(self, view):
         view.run_command("save")
         view.run_command('auto_complete', {
-                            'disable_auto_insert': True,
-                            'api_completions_only': True,
-                            'next_completion_if_showing': False,
-                        })
+                         'disable_auto_insert': True,
+                         'api_completions_only': True,
+                         'next_completion_if_showing': False,
+                         })
 
     def complete_func(self, view):
         syntax = view.settings().get("syntax")
@@ -569,6 +569,7 @@ class JavaValidation(sublime_plugin.EventListener):
                     line_messages[vid][l_no] = []
                 line_messages[vid][l_no].append(e)
             self.visualize(view)
+            self.on_selection_modified(view)
 
         tasks.put(async_validate_task)
 
@@ -660,7 +661,7 @@ class JavaImportClassUnderCursor(sublime_plugin.TextCommand):
 
     def import_selected(self, selected_idx):
         self.view.run_command("java_add_import_class",
-            {'class_name': self.possible_imports[selected_idx]})
+                              {'class_name': self.possible_imports[selected_idx]})
 
 
 class JavaAddImportClass(sublime_plugin.TextCommand):

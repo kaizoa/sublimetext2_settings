@@ -152,34 +152,6 @@ class SideBarFilesOpenWithEditApplicationsCommand(sublime_plugin.WindowCommand):
 								}
 			},
 
-			//separator
-			{"caption":"-"},
-
-			//application 2
-			{
-				"caption": "SeaMonkey",
-				"id": "side-bar-files-open-with-seamonkey",
-
-				"command": "side_bar_files_open_with",
-				"args": {
-									"paths": [],
-									"application": "C:\\\\Archivos de programa\\\\SeaMonkey\\\\seamonkey.exe", // WINNT
-									"extensions":"" //open all even folders
-								}
-			},
-			//application n
-			{
-				"caption": "Chrome",
-				"id": "side-bar-files-open-with-chrome",
-
-				"command": "side_bar_files_open_with",
-				"args": {
-									"paths": [],
-									"application": "C:\\\\Documents and Settings\\\\tito\\\\Configuración local\\\\Datos de programa\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe",
-									"extensions":".*" //any file with extension
-								}
-			},
-
 			{"caption":"-"}
 		]
 	}
@@ -1224,9 +1196,7 @@ class SideBarProjectItemExcludeCommand(sublime_plugin.WindowCommand):
 class SideBarOpenInBrowserCommand(sublime_plugin.WindowCommand):
 	def run(self, paths = [], type = False):
 
-		browser = s.get("default_browser")
-		if browser == '':
-			browser = 'firefox'
+		browser = s.get("default_browser", "")
 
 		if type == False or type == 'testing':
 			type = 'url_testing'
@@ -1416,8 +1386,11 @@ class SideBarOpenInBrowserCommand(sublime_plugin.WindowCommand):
 				])
 				commands = ['-new-tab', '-url', url]
 		else:
-			sublime.error_message('Browser "'+browser+'" not found!\nUse any of the following: firefox, chrome, chromium, opera, safari')
-			return
+			if s.get('portable_browser') != '':
+				items.extend([s.get('portable_browser')])
+			commands = ['-new-tab', url]
+			#sublime.error_message('Browser "'+browser+'" not found!\nUse any of the following: firefox, chrome, chromium, opera, safari')
+			#return
 
 		for item in items:
 			try:
